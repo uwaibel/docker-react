@@ -11,7 +11,7 @@ script:
 #AWS deployment settings
 deploy:
   provider: elasticbeanstalk
-  region: ":eu-central-1"
+  region: "eu-central-1"
   app: "docker-reacto"
   env: "DockerReacto-env"
   bucket_name: "elasticbeanstalk-eu-central-1-741157268730"
