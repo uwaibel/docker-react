@@ -7,7 +7,8 @@ before_install:
 
 script:
   - docker run -it uwaibel/docker-react npm run test -- --coverage
-
+  
+#AWS deployment settings
 deploy:
   provider: elasticbeanstalk
   region: ":eu-central-1"

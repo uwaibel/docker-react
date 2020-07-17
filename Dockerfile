@@ -12,6 +12,8 @@ RUN npm run build
 
 #RUN phase
 FROM nginx
+#hier für AWS Elastic beanstalk um Port 80 nach außen zu geben
+EXPOSE 80
 
 COPY --from=builder /app/build /usr/share/ngnix/html
 
