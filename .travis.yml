@@ -6,4 +6,4 @@ before_install:
   - docker build -t uwaibel/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run npm run test -- --coverage 
+  - docker run npm run test -- --coverage
