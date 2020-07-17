@@ -6,8 +6,8 @@ before_install:
   - docker build -t uwaibel/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -it uwaibel/docker-react npm run test -- --coverage
-  
+  - docker run -it -e CI=true uwaibel/docker-react npm run test -- --coverage
+
 #AWS deployment settings
 deploy:
   provider: elasticbeanstalk
