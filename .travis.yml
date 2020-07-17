@@ -7,3 +7,17 @@ before_install:
 
 script:
   - docker run uwaibel/docker-react npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: ":eu-central-1"
+  app: "Docker-env"
+  env: "DockerEnv-env"
+  bucket_name: "elasticbeanstalk-eu-central-1-741157268730"
+  bucket_path: "Docker-env"
+  on:
+    branch: master
+
+  access_key_id: $AWS_ACCESS_KEY   
+  secret_access_key: 
+    secure: "$AWS_SECRET_KEY"  
